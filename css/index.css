@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.alert-box {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+    display: none;
+}
+.alert-box h2 {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.alert-box p {
+    padding: 5px;
+}
+.alert-box button {
+    width: 150px;
+    padding: 5px;
+    margin-top: 10px;
+}
