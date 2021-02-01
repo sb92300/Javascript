@@ -1,0 +1,58 @@
+.main-bg {
+    background: url(../image/portfolio1.jpg);
+    background-size: cover;
+    color: rgb(105, 218, 0);
+    font-weight: 600;
+    border-radius: 0;
+}
+.black-bg {
+    background:rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.white-bg {
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 120px;
+}
+.white-bg p,a {
+    padding: 10px;
+}
+.white-bg a {
+    margin-top: 20px;
+}
+.white-bg input {
+    width: 300px;
+    margin: 20px;
+    display: block;
+}
+.white-bg button {
+    width: 100px;
+    margin: 20px;
+    padding: 10px;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+.nav-menu h4{
+    margin: 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.nav-menu:active {
+    color: black;
+}
+.nav-sub {
+    display: none;
+}
