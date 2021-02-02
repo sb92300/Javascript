@@ -57,7 +57,7 @@
             $('.nav-sub').slideToggle();
         });
         $('form').on('submit', function(e) {
-          if($('email').val() == '') {
+          if($('#email').val() == '') {
             e.preventDefault();
             $('#noId').show();
           } else if($('#password').val() == '') {
