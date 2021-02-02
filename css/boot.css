@@ -5,7 +5,7 @@
     font-weight: 600;
     border-radius: 0;
 }
-.black-bg {
+.black-bg, .modal-bg {
     background:rgba(0,0,0,0.5);
     position: fixed;
     z-index: 5;
@@ -13,7 +13,7 @@
     height: 100%;
     display: none;
 }
-.white-bg {
+.white-bg, .modal-alert {
     background-color: #fff;
     width: 80%;
     margin: auto;
@@ -35,6 +35,21 @@
     width: 100px;
     margin: 20px;
     padding: 10px;
+}
+#noId {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    display: none; 
+}
+
+#noPw {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    display: none;
 }
 .nav-menu {
     display: flex;
