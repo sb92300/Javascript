@@ -18,21 +18,26 @@
             <form action="login.php" id="login-action">
               <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" id="email">
-                <p id="noId">아이디가 없습니다.</p>
+                <p id="noId">아이디가 틀립니다.</p>
               </div>
               <div class="form-group">
                 <input type="password" id="password" class="form-control" placeholder="Password">
-                <p id="noPw">비밀번호가 없습니다.</p>
+                <p id="noPw">비밀번호가 틀립니다.</p>
               </div>
               <button type="submit" class="btn btn-primary">전송</button>
               <button id="cancel" class="btn btn-primary">취소</button>
             </form>
         </div>
     </div>
+    <div class="left-menu">
+      <p>menu title</p>
+      <a id="close-btn" class="btn btn-primary btn-lg" href="#" role="button">close-menu</a>
+    </div>
     <div class="nav-menu">
         <h4>Logo</h4>
         <a id="nav-toggle">products</a>
     </div>
+
     <ul class="list-group nav-sub">
         <li class="list-group-item">how to study javascript?</li>
         <li class="list-group-item">how to study jquery</li>
@@ -43,34 +48,57 @@
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a id="logIn-btn" class="btn btn-primary btn-lg" href="#" role="button">Log-in</a>
+        <a id="logIn-btn" class="btn btn-primary btn-lg" role="button">Log-in</a>
+        <a id="showMenu-btn" class="btn btn-primary btn-lg" role="button">show menu</a>
       </div>
-
     <script>
-        $('#logIn-btn').on('click', function(e) {
-            $('#black-bg').fadeIn();
+      //로그인 버튼 클릭 시 모달창 토글
+        $('#logIn-btn').click( function() {
+          $('#black-bg').addClass('slide-down');
+          $('#black-bg').removeClass('slide-up');
         });
         $('#cancel').click( function() {
-            $('#black-bg').fadeOut();
+          $('#black-bg').addClass('slide-up');
+          $('#black-bg').removeClass('slide-down');
+        });       
+      //메뉴 버튼 클릭시 모달창 토글
+        $('#showMenu-btn').click( function() {
+          $('.left-menu').addClass('left-menu-ani');
+          $('.left-menu').removeClass('left-menu-ani-close');
         });
+        $('#close-btn').click( function() {
+          $('.left-menu').addClass('left-menu-ani-close');
+          $('.left-menu').removeClass('left-menu-ani',)
+        });
+      //product 클릭시 메뉴창
         $('#nav-toggle').click(function() {
             $('.nav-sub').slideToggle();
         });
+      //e-mail, pw 인풋창 검증
         $('form').on('submit', function(e) {
-          if($('#email').val() == '') {
+          // if($('#email').val() == '') {
+          //   e.preventDefault();
+          //   $('#noId').show();
+          // } else if($('#password').val() == '') {
+          //   e.preventDefault();
+          //   $('#noPw').show();
+          // } else {
+          //   console.log('log-in success');
+          // }
+          var inputEmail = $('#email').val();
+          var regex = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/
+          var inputPw = $('#password').val();
+          if(/\S+@\S+\.\S+/.test(inputEmail) == false || inputEmail == null) {
             e.preventDefault();
             $('#noId').show();
-          } else if($('#password').val() == '') {
+          } else if(regex.test(inputPw) == false || inputPw == null) {
             e.preventDefault();
             $('#noPw').show();
           } else {
-            console.log('log-in success');
+            console.log('log-in success')
           }
         });
-        var 이름 = ['a','b','c','d','e'];
-        var age = [28,5,12,86,53];
-
-
+        /\S+@\S+\.\S+/.test('abc@abc.com');
     </script>  
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
