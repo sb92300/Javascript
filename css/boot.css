@@ -5,13 +5,15 @@
     font-weight: 600;
     border-radius: 0;
 }
-.black-bg, .modal-bg {
+.black-bg { 
+    transform: translateY(-1000px);
+}
+.black-bg {
     background:rgba(0,0,0,0.5);
     position: fixed;
     z-index: 5;
     width: 100%;
     height: 100%;
-    display: none;
 }
 .white-bg, .modal-alert {
     background-color: #fff;
@@ -70,4 +72,28 @@
 }
 .nav-sub {
     display: none;
+}
+.left-menu {
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    position: fixed;
+    text-align: center;
+    transform: translateX(-200px);
+    transition: all 1s;
+}
+.left-menu-ani {
+    transform: translateX(0px);
+}
+.left-menu-ani-close {
+    transform: translateX(-200px);
+}
+.slide-down {
+    transform: translateY(0px);
+    transition: all 1s;
+}
+.slide-up {
+    transition: all 1s;
+    transform: translateY(-1000px);
 }
