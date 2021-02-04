@@ -51,6 +51,18 @@
         <a id="logIn-btn" class="btn btn-primary btn-lg" role="button">Log-in</a>
         <a id="showMenu-btn" class="btn btn-primary btn-lg" role="button">show menu</a>
       </div>
+      <h4 class="my-4 text-center">showcase</h4>
+      <div style="overflow: hidden; position: relative;">
+          <div class="slide-container">
+            <div class="slide-box"><img src="../image/portfolio1.jpg"></div>
+            <div class="slide-box"><img src="../image/portfolio2.jpg"></div>
+            <div class="slide-box"><img src="../image/portfolio3.jpg"></div>
+          </div>
+      </div>  
+        <button class="slide-1">1</button>
+        <button class="slide-2">2</button>
+        <button class="slide-3">3</button>
+      <div class="my-5"></div>
     <script>
       //로그인 버튼 클릭 시 모달창 토글
         $('#logIn-btn').click( function() {
@@ -87,6 +99,7 @@
           // }
           var inputEmail = $('#email').val();
           var regex = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/
+          var regPw = /[A-Z]+/;
           var inputPw = $('#password').val();
           if(/\S+@\S+\.\S+/.test(inputEmail) == false || inputEmail == null) {
             e.preventDefault();
@@ -98,7 +111,18 @@
             console.log('log-in success')
           }
         });
-        /\S+@\S+\.\S+/.test('abc@abc.com');
+        // 사진 슬라이드 기능
+        $('.slide-1').click( function() {
+            $('.slide-container').removeClass('slide-left2 slide-left3');
+        });
+        $('.slide-2').click( function() {
+            $('.slide-container').addClass('slide-left2');
+            $('.slide-container').removeClass('slide-left3');
+        });
+        $('.slide-3').click( function() {
+            $('.slide-container').addClass('slide-left3');
+            $('.slide-container').removeClass('slide-left2');
+        });
     </script>  
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
