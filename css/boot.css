@@ -97,3 +97,24 @@
     transition: all 1s;
     transform: translateY(-1000px);
 }
+.slide-box {
+    width: 100vw;
+    height: 80vh;
+    float: left;
+}
+.slide-box img {
+    width: 100%;
+}
+.slide-container {
+    width: 300vw;
+    transition: transform 1s;
+}
+.slide-left1 {
+    transform: translateX(200vw);
+}
+.slide-left2 {
+    transform: translateX(-100vw);
+}
+.slide-left3 {
+    transform: translateX(-200vw);
+}
