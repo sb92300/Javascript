@@ -52,16 +52,20 @@
         <a id="showMenu-btn" class="btn btn-primary btn-lg" role="button">show menu</a>
       </div>
       <h4 class="my-4 text-center">showcase</h4>
-      <div style="overflow: hidden; position: relative;">
+      <div class="wrap-slide" style="overflow: hidden; position: relative;">
           <div class="slide-container">
             <div class="slide-box"><img src="../image/portfolio1.jpg"></div>
             <div class="slide-box"><img src="../image/portfolio2.jpg"></div>
             <div class="slide-box"><img src="../image/portfolio3.jpg"></div>
           </div>
-      </div>  
-        <button class="slide-1">1</button>
-        <button class="slide-2">2</button>
-        <button class="slide-3">3</button>
+          <button class="slide-left"> < </button>
+          <button class="slide-right"> > </button>
+      </div>
+      <div class="numBtn">
+        <button class="slide-1 numBtn-css">1</button>
+        <button class="slide-2 numBtn-css">2</button>
+        <button class="slide-3 numBtn-css">3</button>
+      </div>
       <div class="my-5"></div>
     <script>
       //로그인 버튼 클릭 시 모달창 토글
@@ -111,17 +115,29 @@
             console.log('log-in success')
           }
         });
-        // 사진 슬라이드 기능
+        // 사진 슬라이드 기능 (1,2,3 버튼 이용)
         $('.slide-1').click( function() {
-            $('.slide-container').removeClass('slide-left2 slide-left3');
+            $('.slide-container').css('transform','translateX(0vw)');
         });
         $('.slide-2').click( function() {
-            $('.slide-container').addClass('slide-left2');
-            $('.slide-container').removeClass('slide-left3');
+            $('.slide-container').css('transform','translateX(-100vw)');
         });
         $('.slide-3').click( function() {
-            $('.slide-container').addClass('slide-left3');
-            $('.slide-container').removeClass('slide-left2');
+          $('.slide-container').css('transform','translateX(-200vw)');
+        });
+        //사진 슬라이드 기능 (다음, 이전 버튼 이용)
+        var nowPic = 1;
+        $('.slide-right').click( function() {
+            if(nowPic < 3) {
+              $('.slide-container').css('transform', 'translateX(-'+ nowPic + '00vw)');
+            nowPic = nowPic + 1
+            };
+        });
+        $('.slide-left').click( function() {
+          if(nowPic > 1) {
+            $('.slide-container').css('transform', 'translateX(-' + (nowPic - 2) + '00vw)');
+            nowPic = nowPic - 1;
+          };
         });
     </script>  
     <!-- Optional JavaScript; choose one of the two! -->
