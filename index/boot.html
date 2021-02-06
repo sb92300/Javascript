@@ -34,10 +34,9 @@
       <a id="close-btn" class="btn btn-primary btn-lg" href="#" role="button">close-menu</a>
     </div>
     <div class="nav-menu">
-        <h4>Logo</h4>
-        <a id="nav-toggle">products</a>
+        <h4 class="nav-logo">Logo</h4>
+        <a id="nav-toggle" class="nav-toggle">products</a>
     </div>
-
     <ul class="list-group nav-sub">
         <li class="list-group-item">how to study javascript?</li>
         <li class="list-group-item">how to study jquery</li>
@@ -67,6 +66,23 @@
         <button class="slide-3 numBtn-css">3</button>
       </div>
       <div class="my-5"></div>
+      <div class="container mt-5">
+        <ul class="list">
+          <li class="tab-button">Products</li>
+          <li class="tab-button active">Information</li>
+          <li class="tab-button">Shipping</li>
+        </ul>
+      
+        <div class="tab-content">
+          <p>상품설명입니다. Product</p>
+        </div>
+        <div class="tab-content show">
+          <p>상품정보입니다. Info</p>
+        </div>
+        <div class="tab-content">
+          <p>배송정보입니다. Shipping</p>
+        </div>
+      </div>
     <script>
       //로그인 버튼 클릭 시 모달창 토글
         $('#logIn-btn').click( function() {
@@ -139,10 +155,25 @@
             nowPic = nowPic - 1;
           };
         });
+        //스크롤 시 nav-menu의 style 변화
+        $(window).on('scroll', function() {
+          if($(window).scrollTop() > 100 ) {
+            $('.nav-menu').addClass('nav-menu-css');
+            $('.nav-logo').addClass('nav-logo-css');
+            $('#nav-toggle').addClass('nav-toggle-css')
+          } else {
+            $('.nav-menu').removeClass('nav-menu-css');
+            $('.nav-logo').removeClass('nav-logo-css');
+            $('#nav-toggle').removeClass('nav-toggle-css');
+          }
+        });
+        
     </script>  
+   
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./tab.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
