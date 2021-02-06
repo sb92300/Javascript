@@ -16,7 +16,7 @@
 // $('.tab-button').eq(2).addClass('active');
 // $('.tab-content').eq(2).addClass('show');
 // });
-var tab = $('.tab-content');
+var tab = $('.tab-button');
 for (let i = 0; i < tab.length; i++) {
     $('.tab-button').eq(i).on('click', function() {
         $('.tab-button').removeClass('active');
