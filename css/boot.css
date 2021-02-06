@@ -58,14 +58,36 @@
     justify-content: space-between;
     padding: 15px;
     align-items: center;
+    background-color: transparent;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    color: white;
+    height: 80px;
 }
-.nav-menu h4{
-    margin: 0;
-}
-.nav-menu a {
-    text-decoration: none;
+.nav-menu-css {
+    background: #fff;
     color: black;
+    height: 60px;
+}
+.nav-logo{
+    font-size: 34px;
+    transition: all 0.5s;
+}
+.nav-logo-css {
+    color: black;
+    font-size: 24px;
+}
+.nav-toggle{
+    text-decoration: none;
     cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: all 0.5s;
+}
+.nav-toggle-css {
+    font-size: 16px;
+    color: black;
 }
 .nav-menu:active {
     color: black;
@@ -162,3 +184,39 @@
     background-color: rgb(16, 108, 161);
     transition: all 1s;
 }
+ul.list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+  }
+  ul.list::after {
+	content: '';
+	display: block;
+	clear: both;
+  }
+  .tab-button {
+	display: block;
+	padding: 10px 20px 10px 20px;
+	float: left;
+	margin-right: -1px;
+	margin-bottom: -1px;
+	color: grey;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  .active {
+	border-top: 2px solid orange;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid white;
+	border-left: 1px solid #ccc;
+	color: black;
+	margin-top: -2px;
+  }
+  .tab-content {
+	display: none;
+	padding: 10px;
+  }
+  .show {
+	display: block;
+  }
