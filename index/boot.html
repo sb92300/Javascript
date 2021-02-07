@@ -89,6 +89,16 @@
           $('#black-bg').addClass('slide-down');
           $('#black-bg').removeClass('slide-up');
         });
+        $('.black-bg').click(function(e) {
+          // e.target; // 실제로 클릭한 요소
+          // e.currentTarget; //지금 이벤트 리스너가 달린 곳(여기서는 .black-bg) = $(this)
+          // e.preventDefault(); // 기본동작 막기
+          //e.target == $(''.black-bg') 가 안되는 이유. e.target은 js 문법, 셀렉터는 jquery 문법이라 비교 성립 불가.
+          // if(e.target == this) 는 가능.
+            if(e.target == e.currentTarget) {
+              $('.black-bg').addClass('slide-up');
+            };
+        });
         $('#cancel').click( function() {
           $('#black-bg').addClass('slide-up');
           $('#black-bg').removeClass('slide-down');
@@ -167,13 +177,14 @@
             $('#nav-toggle').removeClass('nav-toggle-css');
           }
         });
-        
     </script>  
    
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    //script src 는 여기다 붙여야 오류가 안난다.
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="./tab.js"></script>
+    
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
