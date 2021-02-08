@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="brand">상품제목</h4>
+    <p id="model">상품내용</p>
+    <script>
+        var 숫자형 = 20;
+        var 문자형 = "20";
+        var 배열형 = [apple, banana, carrot, dog];
+            // console.log(배열형[0]);
+        var object = {원산지 : '서울', 아이템 : '갤럭시'};
+            // 추출 예제 console.log(object.원산지);
+            var array = ['bmw', 520];
+        var object = {brand : 'bmw', model : '520'};
+        var data = [ {brand : 'bmw'}, {model : '520'} ];
+        // document.getElementById('brand').innerHTML = array[0];
+        // document.getElementById('model').innerHTML = array[1];
+        document.getElementById('brand').innerHTML = data[0].brand;
+        document.getElementById('model').innerHTML = data[1].model;
+    </script>
+</body>
+</html>
