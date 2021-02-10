@@ -1,0 +1,32 @@
+nav {
+    height: 60px;
+    box-shadow: 0px 1px 4px 0.5px;
+    display:flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+}
+nav div {
+    margin-top: 15px;
+}
+.logo {
+    padding-left: 20px;
+}
+.menu {
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.card-background {
+    height: 3000px;
+    padding-top: 600px;
+    margin-bottom: 1600px;
+}
+.card-box {
+    position: sticky;
+    top: 200px;
+}
+.card-box img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+}

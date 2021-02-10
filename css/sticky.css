@@ -1,0 +1,30 @@
+.grey {
+    background: black;
+    height: 2000px;
+    margin-top: 600px;
+    margin-bottom: 1600px;
+}
+.sticky {
+    position: sticky;
+    top: 100px;
+    float: right;
+    width: 50%;
+}
+.left-text {
+    float: left;
+    color: white;
+    padding: 20px;
+    width: 50%;
+}
+.opacity {
+    position: absolute;
+    width: 100%;
+    height: 2000px;
+    z-index: 1;
+    display: none;
+    transition: all 1s;
+}
+.ani {
+    display: block;
+    background-color: rgba(0,0,0,0.7);
+}
