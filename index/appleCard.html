@@ -11,15 +11,6 @@
     <title>apple Music</title>
   </head>
   <body>
-    <header>
-      <nav>
-          <div class="logo">APPLE MUSIC</div>
-          <div style="flex-grow: 10;"></div>
-          <div class="menu">Music</div>
-          <div class="menu">Album</div>
-          <div class="menu">My page</div>
-      </nav>
-    </header>
     <div class="card-background">
         <div class="card-box">
             <img src="../image/card1.png">
@@ -36,11 +27,10 @@
         $(window).scroll(function() {
            var height = $(window).scrollTop();
            console.log(height);
-           var y = (-1/480) * height + 11/6;
-           var z = (-1/800) * height + 19/10;// 식 다시 구할 것.
-           //1차 함수 y=ax+b y가 1일때 높이는 650, y가 0 일때 높이는 1150
+           var y = -1/68 * height + 60/17;
+           var z = -0.000416667 * height + 1;
            $('.card-box').eq(0).css('opacity', y );
-           $('.card-box').eq(0).css('transform',`scaleX(${z})`);
+           $('.card-box').eq(0).css('transform', `scale(${z})` );
         });
     </script>
 
