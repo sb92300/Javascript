@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="../css/typeWriting.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="type-change" style="display: none;">안녕하세요.</h1>
+    <button class='btn'>push this</button>
+    <script>
+        var h1 = document.getElementById('type-change');
+        var type = document.getElementById('type-change').innerHTML;
+        $('.btn').click(function() {
+            typeAni(h1, type); {
+            }
+        });
+
+        function typeAni(h1, type) {
+            h1.innerHTML = '';
+            $('#type-change').css('display', 'block');
+            console.log(h1);
+            for(let i = 0; i < type.length; i++) {
+                setTimeout(function() {
+                h1.innerHTML = h1.innerHTML + type[i];
+                console.log(type[0]);
+                }, 300 * i);
+            };
+        }
+    </script>
+</body>
+</html>
