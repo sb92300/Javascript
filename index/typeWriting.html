@@ -22,11 +22,9 @@
         function typeAni(h1, type) {
             h1.innerHTML = '';
             $('#type-change').css('display', 'block');
-            console.log(h1);
             for(let i = 0; i < type.length; i++) {
                 setTimeout(function() {
                 h1.innerHTML = h1.innerHTML + type[i];
-                console.log(type[0]);
                 }, 300 * i);
             };
         }
