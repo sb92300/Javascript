@@ -1,56 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <script src="jquery-3.5.1.min.js"></script>
-    <title>Javascript, jquery</title>
+    <link rel="stylesheet" href="index.css">
+    <title>study vanila js</title>
 </head>
 <body>
-    <button onclick="homework('아이디를 입력하세요.', '아이디가 없습니다.', 'block');">눌러보세요1.</button>
-    <button onclick="homework('비밀번호 입력하세요.', '비밀번호가 없습니다.','block');">눌러보세요2.</button>
-    <div class="alert-box" id="alert">
-        <h2>알림</h2>
-        <p id="content1">alert창 입니다.</p>
-        <p id="content2">경고창 입니다.</p>
-        <button id="close">닫기</button>
+    <h1>This works!</h1>
+    <div id="div" style="margin-bottom: 20px; border: 1px solid black; width: 200px; background-color: red;">
+        <input type="text" id="test" onchange="hello();">
+        <p id="test2"></p>
+        <button onclick="document.getElementById('div').style.display ='none';">cancel</button>
     </div>
-    <h2 id="test">안녕하세요.</h2>
-    <p class="greeting" id="hello">반가워요.</p>
-    <p class="greeting">반가워요.</p>
-    <p class="greeting">반가워요.</p>
-    <button class="btn" id="btn1">버튼btn</button>
-    <button class="btn" id="btn2">버튼btn</button>
-    <button class="btn" id="btn3">버튼btn</button>
-    <button class="btn" id="btn4">버튼btn</button>
-    <script>
-        $('.btn').on('click', function() {
-            document.getElementById('alert').style.display = 'none';
-        })
-        // .on() == addEventLisetener
-        $('#btn1').on('click', function() {
-            $('#hello').hide();
-        })
-        $('#btn2').on('click', function(){
-            $('#hello').show();
-        })
-        $('#btn3').on('click', function(){
-            $('.greeting').slideUp();
-        })
-        $('#btn4').on('click', function() {
-            $('.greeting').slideDown();
-        })
-        $('.greeting').text('반갑습니다 모두들.');
-        // $('#test').addClass('class','yellow-bg');
-            function homework(a, b, c) {
-                document.getElementById('content1').innerHTML = a;
-                document.getElementById('content2').innerHTML = b;
-                document.getElementById('alert').style.display = c;
-            }
-            document.getElementById('close').addEventListener('click', function() {
-                document.getElementById('alert').style.display = 'none';
-            })
-     </script>
+    <button onclick="document.getElementById('div').style.display='block'">modal</button>
+    <script src="index.js"></script>
 </body>
 </html>
