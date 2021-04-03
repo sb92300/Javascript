@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-wrap {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-container {
+    width: 300vw;
+    height: 600px;
+    display: flex;
+}
+
+.button {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: 250px;
+}
+
+.btn-2 {
+    margin-left: 1450px;
+}
+
+.slide-container .button p {
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.box {
+    width: 100vw;
+    justify-content: flex-start;
+}
+
+.box1 {
+    background-image: url('./budapest.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box2 {
+    background-image: url('./budapest2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box3 {
+    background-image: url('./budapest3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
